@@ -1,0 +1,38 @@
+# TypeScript build info
+*.tsbuildinfo
+
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Next.js build output
+.next/
+out/
+build/
+
+# Environment & secrets
+.env
+.env.local
+.env*.local
+*.pem
+
+# Chat exports — NEVER commit real personal chats
+*_chat.txt
+*chat-export*.txt
+WhatsApp*.txt
+
+# Test output / coverage
+coverage/
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+*.tgz

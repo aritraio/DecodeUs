@@ -1,0 +1,313 @@
+[05/01/2025, 09:00:00] Alex Morgan: Messages and calls are end-to-end encrypted. No one outside of this chat can read them.
+[05/01/2025, 11:10:00] Jordan Lee: Morning! Slept great, you?
+[05/01/2025, 11:20:00] Jordan Lee: Pretty smooth so far, how about yours?
+[05/01/2025, 13:29:00] Alex Morgan: I appreciate how you handled that call earlier
+[05/01/2025, 13:38:00] Alex Morgan: Morning! Did you sleep okay?
+[05/01/2025, 13:49:00] Alex Morgan: That presentation went really well, thanks for the pep talk
+[05/01/2025, 13:50:00] Alex Morgan: Want to grab groceries together after work?
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[05/01/2025, 13:58:00] Alex Morgan: Let's plan something fun for the weekend
+[05/01/2025, 14:10:00] Alex Morgan: That presentation went really well, thanks for the pep talk
+[05/01/2025, 16:22:00] Jordan Lee: <Media omitted>
+[06/01/2025, 08:34:00] Jordan Lee: So proud of you! You earned it
+[06/01/2025, 10:32:00] Jordan Lee: Yes, leaving right around 3:30
+[06/01/2025, 10:36:00] Jordan Lee: How about pasta? I can start the sauce ❤️
+[06/01/2025, 10:53:00] Jordan Lee: Pretty smooth so far, how about yours?
+[06/01/2025, 11:10:00] Jordan Lee: Morning! Slept great, you?
+[06/01/2025, 13:04:00] Alex Morgan: What should we cook tonight?
+[06/01/2025, 13:11:00] Jordan Lee: Yes, leaving right around 3:30
+[06/01/2025, 15:22:00] Alex Morgan: Want to grab groceries together after work?
+[06/01/2025, 15:37:00] Alex Morgan: Let's plan something fun for the weekend
+[07/01/2025, 08:13:00] Jordan Lee: Thanks, I was nervous but it worked out
+Continuing my thought here with extra detail
+And a third line to test stitching
+[07/01/2025, 08:26:00] Alex Morgan: Hope your day is going smoothly
+[07/01/2025, 08:28:00] Alex Morgan: Hope your day is going smoothly
+[07/01/2025, 10:37:00] Jordan Lee: Pretty smooth so far, how about yours?
+[07/01/2025, 12:32:00] Alex Morgan: I appreciate how you handled that call earlier 💯
+[07/01/2025, 12:38:00] Alex Morgan: That presentation went really well, thanks for the pep talk ❤️
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[07/01/2025, 12:54:00] Jordan Lee: So proud of you! You earned it
+[07/01/2025, 12:56:00] Alex Morgan: Morning! Did you sleep okay?
+[07/01/2025, 13:04:00] Jordan Lee: Sure, I'll pick up veggies on my way
+[07/01/2025, 13:09:00] Jordan Lee: Pretty smooth so far, how about yours?
+[07/01/2025, 13:27:00] Jordan Lee: How about pasta? I can start the sauce
+[07/01/2025, 13:34:00] Alex Morgan: Let's plan something fun for the weekend
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[07/01/2025, 13:48:00] Alex Morgan: I appreciate how you handled that call earlier
+[07/01/2025, 13:50:00] Alex Morgan: Hope your day is going smoothly 👍
+[07/01/2025, 14:01:00] Jordan Lee: Picnic on Saturday? Weather looks perfect 🥺
+[07/01/2025, 16:17:00] Alex Morgan: Sending you the playlist we talked about 👍
+[07/01/2025, 18:24:00] Jordan Lee: Morning! Slept great, you?
+[07/01/2025, 18:30:00] Jordan Lee: Thanks, I was nervous but it worked out
+[07/01/2025, 18:42:00] Jordan Lee: Always. You know I'm here for you
+[07/01/2025, 18:51:00] Jordan Lee: Thanks, I was nervous but it worked out 💯
+[07/01/2025, 19:05:00] Alex Morgan: Let's plan something fun for the weekend
+[07/01/2025, 19:19:00] Jordan Lee: <Media omitted>
+[07/01/2025, 19:22:00] Jordan Lee: Pretty smooth so far, how about yours?
+[08/01/2025, 11:40:00] Alex Morgan: Are we still meeting at 4?
+[08/01/2025, 11:43:00] Alex Morgan: image omitted
+[08/01/2025, 13:58:00] Alex Morgan: Sending you the playlist we talked about
+[08/01/2025, 14:00:00] Alex Morgan: Thanks for checking in, that meant a lot
+[08/01/2025, 14:18:00] Jordan Lee: Yes, leaving right around 3:30
+[08/01/2025, 14:34:00] Jordan Lee: Always. You know I'm here for you?
+[08/01/2025, 16:46:00] Alex Morgan: I appreciate how you handled that call earlier 😂
+[08/01/2025, 18:54:00] Jordan Lee: Pretty smooth so far, how about yours? 😅
+Continuing my thought here with extra detail
+And a third line to test stitching
+[08/01/2025, 20:48:00] Alex Morgan: Sending you the playlist we talked about
+[08/01/2025, 21:01:00] Jordan Lee: Picnic on Saturday? Weather looks perfect
+[09/01/2025, 13:08:00] Jordan Lee: Pretty smooth so far, how about yours?
+[09/01/2025, 15:14:00] Alex Morgan: What should we cook tonight?
+[09/01/2025, 15:31:00] Alex Morgan: Sending you the playlist we talked about 🔥
+[10/01/2025, 07:56:00] Jordan Lee: Sure, I'll pick up veggies on my way
+[10/01/2025, 08:08:00] Jordan Lee: Yes, leaving right around 3:30
+[10/01/2025, 08:11:00] Alex Morgan: Want to grab groceries together after work?
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[10/01/2025, 08:12:00] Alex Morgan: Morning! Did you sleep okay?
+[10/01/2025, 08:20:00] Alex Morgan: I appreciate how you handled that call earlier 🙏
+[10/01/2025, 08:33:00] Jordan Lee: How about pasta? I can start the sauce?
+[10/01/2025, 08:48:00] Alex Morgan: Sending you the playlist we talked about
+[11/01/2025, 01:05:00] Jordan Lee: Thanks, I was nervous but it worked out
+[11/01/2025, 01:17:00] Alex Morgan: Want to grab groceries together after work? 💯?
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[11/01/2025, 01:26:00] Alex Morgan: This message was deleted
+[11/01/2025, 01:37:00] Jordan Lee: Pretty smooth so far, how about yours?
+[11/01/2025, 01:42:00] Jordan Lee: Loved those songs, added a few more 😂
+[11/01/2025, 01:51:00] Jordan Lee: Picnic on Saturday? Weather looks perfect
+[11/01/2025, 02:02:00] Alex Morgan: I appreciate how you handled that call earlier 😅
+[11/01/2025, 02:14:00] Jordan Lee: Morning! Slept great, you? ❤️
+[11/01/2025, 04:15:00] Jordan Lee: So proud of you! You earned it?
+[11/01/2025, 04:29:00] Jordan Lee: How about pasta? I can start the sauce
+[11/01/2025, 04:40:00] Alex Morgan: Sending you the playlist we talked about
+[11/01/2025, 04:51:00] Alex Morgan: This message was deleted
+[11/01/2025, 06:50:00] Jordan Lee: Loved those songs, added a few more
+[11/01/2025, 23:09:00] Jordan Lee: Yes, leaving right around 3:30
+[12/01/2025, 15:18:00] Alex Morgan: That presentation went really well, thanks for the pep talk
+[12/01/2025, 15:22:00] Jordan Lee: This message was deleted
+[12/01/2025, 15:33:00] Jordan Lee: Sure, I'll pick up veggies on my way 🎉
+[12/01/2025, 15:35:00] Alex Morgan: Morning! Did you sleep okay?
+[12/01/2025, 15:39:00] Jordan Lee: Picnic on Saturday? Weather looks perfect
+[13/01/2025, 06:59:00] Alex Morgan: Let's plan something fun for the weekend
+[13/01/2025, 09:13:00] Alex Morgan: Hope your day is going smoothly
+[13/01/2025, 11:13:00] Jordan Lee: Picnic on Saturday? Weather looks perfect
+[13/01/2025, 11:14:00] Alex Morgan: Are we still meeting at 4?
+[13/01/2025, 11:17:00] Alex Morgan: I appreciate how you handled that call earlier 😂
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[13/01/2025, 11:27:00] Alex Morgan: This message was deleted
+[14/01/2025, 03:45:00] Alex Morgan: Are we still meeting at 4?
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[14/01/2025, 03:55:00] Jordan Lee: Thanks, I was nervous but it worked out
+[14/01/2025, 04:11:00] Jordan Lee: Loved those songs, added a few more
+[14/01/2025, 04:23:00] Alex Morgan: I appreciate how you handled that call earlier
+[14/01/2025, 04:36:00] Alex Morgan: That presentation went really well, thanks for the pep talk
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[14/01/2025, 06:32:00] Alex Morgan: Let's plan something fun for the weekend
+[14/01/2025, 06:33:00] Jordan Lee: Yes, leaving right around 3:30 🎉
+[14/01/2025, 06:40:00] Jordan Lee: Thanks, I was nervous but it worked out 😂
+Continuing my thought here with extra detail
+And a third line to test stitching
+[14/01/2025, 06:49:00] Jordan Lee: Always. You know I'm here for you
+[14/01/2025, 08:57:00] Jordan Lee: Pretty smooth so far, how about yours? 😅
+[14/01/2025, 09:07:00] Alex Morgan: Sending you the playlist we talked about
+[14/01/2025, 09:24:00] Jordan Lee: Sure, I'll pick up veggies on my way 😅
+[15/01/2025, 01:47:00] Jordan Lee: Always. You know I'm here for you?
+[15/01/2025, 01:53:00] Alex Morgan: Morning! Did you sleep okay?
+[15/01/2025, 02:09:00] Jordan Lee: Yes, leaving right around 3:30
+[15/01/2025, 02:21:00] Alex Morgan: Are we still meeting at 4?
+[15/01/2025, 04:23:00] Jordan Lee: Yes, leaving right around 3:30 ❤️
+[15/01/2025, 06:26:00] Alex Morgan: Want to grab groceries together after work?
+[15/01/2025, 06:39:00] Jordan Lee: Pretty smooth so far, how about yours? ❤️
+[15/01/2025, 22:02:00] Alex Morgan: I appreciate how you handled that call earlier 🔥
+[15/01/2025, 22:18:00] Jordan Lee: Thanks, I was nervous but it worked out
+Continuing my thought here with extra detail
+And a third line to test stitching
+[15/01/2025, 22:28:00] Alex Morgan: That presentation went really well, thanks for the pep talk
+[16/01/2025, 00:23:00] Jordan Lee: Pretty smooth so far, how about yours?
+[16/01/2025, 00:41:00] Jordan Lee: Morning! Slept great, you?
+[16/01/2025, 00:57:00] Alex Morgan: I appreciate how you handled that call earlier
+[16/01/2025, 03:08:00] Jordan Lee: Pretty smooth so far, how about yours?
+[16/01/2025, 03:20:00] Jordan Lee: Always. You know I'm here for you
+Continuing my thought here with extra detail
+And a third line to test stitching
+[16/01/2025, 05:36:00] Alex Morgan: What should we cook tonight?
+[16/01/2025, 05:37:00] Jordan Lee: Thanks, I was nervous but it worked out
+[16/01/2025, 07:37:00] Jordan Lee: Always. You know I'm here for you 🎉
+[16/01/2025, 07:50:00] Jordan Lee: Pretty smooth so far, how about yours?
+[16/01/2025, 23:59:00] Jordan Lee: How about pasta? I can start the sauce
+[17/01/2025, 00:13:00] Jordan Lee: Thanks, I was nervous but it worked out
+[17/01/2025, 00:21:00] Jordan Lee: How about pasta? I can start the sauce
+[17/01/2025, 02:23:00] Jordan Lee: Picnic on Saturday? Weather looks perfect
+[17/01/2025, 02:40:00] Alex Morgan: Let's plan something fun for the weekend
+[17/01/2025, 02:56:00] Jordan Lee: Yes, leaving right around 3:30
+[17/01/2025, 03:07:00] Alex Morgan: Want to grab groceries together after work?
+[17/01/2025, 03:11:00] Jordan Lee: Loved those songs, added a few more
+[17/01/2025, 03:16:00] Jordan Lee: So proud of you! You earned it
+Continuing my thought here with extra detail
+And a third line to test stitching
+[17/01/2025, 18:57:00] Alex Morgan: Hope your day is going smoothly 😂
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[17/01/2025, 19:02:00] Alex Morgan: Morning! Did you sleep okay?
+[18/01/2025, 10:43:00] Jordan Lee: Pretty smooth so far, how about yours?
+[18/01/2025, 10:50:00] Alex Morgan: Sending you the playlist we talked about?
+[18/01/2025, 10:58:00] Alex Morgan: Hope your day is going smoothly 🙏
+[18/01/2025, 11:15:00] Jordan Lee: Morning! Slept great, you?
+[18/01/2025, 13:29:00] Jordan Lee: Morning! Slept great, you?
+[18/01/2025, 13:46:00] Alex Morgan: What should we cook tonight?
+[18/01/2025, 15:57:00] Jordan Lee: Picnic on Saturday? Weather looks perfect
+[18/01/2025, 16:06:00] Jordan Lee: Loved those songs, added a few more
+[18/01/2025, 16:07:00] Jordan Lee: Loved those songs, added a few more
+[18/01/2025, 18:17:00] Alex Morgan: Hope your day is going smoothly
+[18/01/2025, 20:19:00] Jordan Lee: How about pasta? I can start the sauce
+[19/01/2025, 12:28:00] Jordan Lee: Yes, leaving right around 3:30
+[19/01/2025, 12:31:00] Jordan Lee: Picnic on Saturday? Weather looks perfect
+[19/01/2025, 12:46:00] Jordan Lee: Sure, I'll pick up veggies on my way 🙏
+[19/01/2025, 13:02:00] Alex Morgan: Are we still meeting at 4?
+[19/01/2025, 13:16:00] Alex Morgan: <Media omitted>
+[19/01/2025, 13:27:00] Jordan Lee: Picnic on Saturday? Weather looks perfect?
+[19/01/2025, 13:32:00] Jordan Lee: Yes, leaving right around 3:30 🙏?
+[19/01/2025, 13:39:00] Alex Morgan: Thanks for checking in, that meant a lot
+[19/01/2025, 13:41:00] Alex Morgan: That presentation went really well, thanks for the pep talk 😂
+[19/01/2025, 13:46:00] Alex Morgan: Let's plan something fun for the weekend 😂
+[19/01/2025, 13:51:00] Jordan Lee: Always. You know I'm here for you 🎉
+[19/01/2025, 16:03:00] Jordan Lee: Thanks, I was nervous but it worked out
+[19/01/2025, 18:09:00] Jordan Lee: Always. You know I'm here for you
+[19/01/2025, 18:23:00] Alex Morgan: Hope your day is going smoothly
+[19/01/2025, 18:36:00] Alex Morgan: I appreciate how you handled that call earlier
+[19/01/2025, 20:39:00] Alex Morgan: Are we still meeting at 4?
+[20/01/2025, 12:06:00] Alex Morgan: Hope your day is going smoothly
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[20/01/2025, 14:03:00] Jordan Lee: Sure, I'll pick up veggies on my way
+Continuing my thought here with extra detail
+And a third line to test stitching
+[20/01/2025, 14:11:00] Alex Morgan: What should we cook tonight?
+[20/01/2025, 14:27:00] Jordan Lee: Loved those songs, added a few more?
+[20/01/2025, 14:40:00] Jordan Lee: How about pasta? I can start the sauce
+[20/01/2025, 14:51:00] Jordan Lee: Always. You know I'm here for you
+[20/01/2025, 14:58:00] Jordan Lee: How about pasta? I can start the sauce?
+[20/01/2025, 15:05:00] Alex Morgan: That presentation went really well, thanks for the pep talk
+[20/01/2025, 15:19:00] Jordan Lee: Thanks, I was nervous but it worked out
+[20/01/2025, 15:29:00] Jordan Lee: Sure, I'll pick up veggies on my way
+[20/01/2025, 15:30:00] Alex Morgan: Morning! Did you sleep okay?
+[20/01/2025, 15:38:00] Alex Morgan: Hope your day is going smoothly
+[20/01/2025, 15:47:00] Jordan Lee: This message was deleted
+[20/01/2025, 15:51:00] Jordan Lee: So proud of you! You earned it
+[20/01/2025, 16:08:00] Alex Morgan: Sending you the playlist we talked about
+[20/01/2025, 16:25:00] Jordan Lee: Always. You know I'm here for you
+[20/01/2025, 16:35:00] Alex Morgan: Let's plan something fun for the weekend
+[20/01/2025, 18:48:00] Jordan Lee: Picnic on Saturday? Weather looks perfect
+[20/01/2025, 18:58:00] Alex Morgan: Are we still meeting at 4?
+[20/01/2025, 19:14:00] Alex Morgan: I appreciate how you handled that call earlier
+[21/01/2025, 11:04:00] Jordan Lee: Morning! Slept great, you?
+[21/01/2025, 11:10:00] Alex Morgan: Let's plan something fun for the weekend?
+[21/01/2025, 11:16:00] Alex Morgan: Thanks for checking in, that meant a lot
+[21/01/2025, 11:29:00] Alex Morgan: Thanks for checking in, that meant a lot
+[21/01/2025, 13:39:00] Jordan Lee: Sure, I'll pick up veggies on my way 👍?
+[21/01/2025, 13:52:00] Jordan Lee: Thanks, I was nervous but it worked out
+[21/01/2025, 14:02:00] Alex Morgan: I appreciate how you handled that call earlier 👍
+[21/01/2025, 14:12:00] Alex Morgan: Want to grab groceries together after work?
+[21/01/2025, 14:26:00] Jordan Lee: Picnic on Saturday? Weather looks perfect
+[21/01/2025, 16:39:00] Alex Morgan: I appreciate how you handled that call earlier
+[21/01/2025, 16:45:00] Jordan Lee: Morning! Slept great, you?
+[21/01/2025, 16:49:00] Alex Morgan: That presentation went really well, thanks for the pep talk
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[21/01/2025, 18:43:00] Alex Morgan: Sending you the playlist we talked about
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[21/01/2025, 18:59:00] Jordan Lee: Loved those songs, added a few more
+[21/01/2025, 19:15:00] Jordan Lee: How about pasta? I can start the sauce
+[21/01/2025, 19:29:00] Jordan Lee: Sure, I'll pick up veggies on my way 😅
+[21/01/2025, 19:37:00] Alex Morgan: Let's plan something fun for the weekend
+[21/01/2025, 19:54:00] Alex Morgan: Let's plan something fun for the weekend
+[21/01/2025, 20:11:00] Alex Morgan: image omitted
+[21/01/2025, 20:16:00] Alex Morgan: <Media omitted>
+[21/01/2025, 20:28:00] Alex Morgan: Morning! Did you sleep okay? 🔥
+[21/01/2025, 20:38:00] Jordan Lee: So proud of you! You earned it
+[21/01/2025, 20:46:00] Alex Morgan: I appreciate how you handled that call earlier ❤️
+[21/01/2025, 20:54:00] Alex Morgan: Thanks for checking in, that meant a lot
+[21/01/2025, 23:07:00] Alex Morgan: That presentation went really well, thanks for the pep talk
+[21/01/2025, 23:14:00] Alex Morgan: Morning! Did you sleep okay?
+[22/01/2025, 01:24:00] Jordan Lee: How about pasta? I can start the sauce
+[22/01/2025, 03:20:00] Jordan Lee: Sure, I'll pick up veggies on my way
+[22/01/2025, 03:24:00] Alex Morgan: I appreciate how you handled that call earlier?
+[22/01/2025, 03:35:00] Alex Morgan: Are we still meeting at 4?
+[22/01/2025, 03:49:00] Alex Morgan: I appreciate how you handled that call earlier
+[22/01/2025, 04:04:00] Jordan Lee: image omitted
+[22/01/2025, 04:10:00] Alex Morgan: Let's plan something fun for the weekend 😂
+[22/01/2025, 04:20:00] Alex Morgan: That presentation went really well, thanks for the pep talk
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[22/01/2025, 04:27:00] Alex Morgan: Hope your day is going smoothly 🥺
+[22/01/2025, 04:30:00] Jordan Lee: How about pasta? I can start the sauce
+[22/01/2025, 04:43:00] Alex Morgan: Want to grab groceries together after work?
+[22/01/2025, 04:45:00] Alex Morgan: I appreciate how you handled that call earlier 😊
+[22/01/2025, 04:47:00] Alex Morgan: Let's plan something fun for the weekend
+[22/01/2025, 06:52:00] Jordan Lee: So proud of you! You earned it 🎉
+[22/01/2025, 06:53:00] Alex Morgan: Morning! Did you sleep okay?
+[22/01/2025, 07:00:00] Alex Morgan: Hope your day is going smoothly
+[22/01/2025, 07:04:00] Alex Morgan: I appreciate how you handled that call earlier
+[22/01/2025, 08:59:00] Jordan Lee: Thanks, I was nervous but it worked out
+[23/01/2025, 00:37:00] Jordan Lee: image omitted
+[23/01/2025, 00:53:00] Jordan Lee: Pretty smooth so far, how about yours?
+[23/01/2025, 00:56:00] Alex Morgan: Morning! Did you sleep okay?
+[23/01/2025, 01:09:00] Alex Morgan: Let's plan something fun for the weekend
+[23/01/2025, 01:24:00] Jordan Lee: Loved those songs, added a few more
+[23/01/2025, 03:33:00] Alex Morgan: Sending you the playlist we talked about
+[23/01/2025, 03:47:00] Alex Morgan: Let's plan something fun for the weekend 🥺
+[23/01/2025, 03:58:00] Alex Morgan: Sending you the playlist we talked about
+[23/01/2025, 05:57:00] Alex Morgan: What should we cook tonight?
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[23/01/2025, 08:11:00] Jordan Lee: How about pasta? I can start the sauce
+[23/01/2025, 08:16:00] Alex Morgan: Want to grab groceries together after work?
+[23/01/2025, 08:32:00] Alex Morgan: Are we still meeting at 4?
+[23/01/2025, 08:45:00] Alex Morgan: Sending you the playlist we talked about
+[23/01/2025, 10:54:00] Jordan Lee: Morning! Slept great, you?
+[23/01/2025, 12:58:00] Alex Morgan: That presentation went really well, thanks for the pep talk
+[23/01/2025, 13:14:00] Alex Morgan: Morning! Did you sleep okay?
+[23/01/2025, 13:25:00] Alex Morgan: Morning! Did you sleep okay?
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[23/01/2025, 13:41:00] Jordan Lee: Always. You know I'm here for you
+[23/01/2025, 13:45:00] Alex Morgan: Thanks for checking in, that meant a lot
+[23/01/2025, 13:54:00] Jordan Lee: Pretty smooth so far, how about yours?
+[23/01/2025, 16:02:00] Alex Morgan: Sending you the playlist we talked about
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[23/01/2025, 16:15:00] Alex Morgan: Are we still meeting at 4?
+[23/01/2025, 16:31:00] Alex Morgan: Are we still meeting at 4?
+[23/01/2025, 16:49:00] Alex Morgan: I appreciate how you handled that call earlier
+[24/01/2025, 08:37:00] Jordan Lee: Pretty smooth so far, how about yours?
+Continuing my thought here with extra detail
+And a third line to test stitching
+[24/01/2025, 08:45:00] Jordan Lee: Thanks, I was nervous but it worked out
+[24/01/2025, 08:48:00] Alex Morgan: Hope your day is going smoothly
+[24/01/2025, 08:55:00] Alex Morgan: What should we cook tonight?
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[24/01/2025, 08:58:00] Jordan Lee: <Media omitted>
+[24/01/2025, 09:04:00] Alex Morgan: What should we cook tonight?
+[24/01/2025, 09:07:00] Alex Morgan: Thanks for checking in, that meant a lot
+[24/01/2025, 11:07:00] Alex Morgan: Morning! Did you sleep okay? 🥺
+[24/01/2025, 11:20:00] Jordan Lee: Yes, leaving right around 3:30 🥺
+[24/01/2025, 11:24:00] Alex Morgan: Thanks for checking in, that meant a lot 😅
+[24/01/2025, 11:37:00] Alex Morgan: Are we still meeting at 4?
+Adding a bit more context on the next line with extra detail
+And a third line to test stitching
+[24/01/2025, 11:49:00] Alex Morgan: Want to grab groceries together after work?
+[24/01/2025, 11:55:00] Alex Morgan: Let's plan something fun for the weekend
+[24/01/2025, 12:02:00] Jordan Lee: Always. You know I'm here for you
+[24/01/2025, 12:11:00] Alex Morgan: Sending you the playlist we talked about 🙏
+[24/01/2025, 12:23:00] Jordan Lee: Picnic on Saturday? Weather looks perfect
+[24/01/2025, 14:32:00] Alex Morgan: This message was deleted

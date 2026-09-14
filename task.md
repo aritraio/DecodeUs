@@ -82,7 +82,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Scaffold a clean, production-ready Next.js 15+ App Router application with TypeScript, Tailwind CSS, Swiss International tokens, Vitest unit test runner, and strict code quality configurations.
 
-- [ ] **Task 00.1: Initialize Next.js 15+ App Router Project**
+- [x] **Task 00.1: Initialize Next.js 15+ App Router Project**
   - **Action**: Verify package structure or initialize Next.js 15 with TypeScript, Tailwind CSS, ESLint, App Router, and `src/` directory layout.
   - **Target Files**: `package.json`, `tsconfig.json`, `next.config.ts`, `.gitignore`
   - **Requirements**:
@@ -90,7 +90,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Exclude `.env`, `.env.local`, and any chat exports from `.gitignore`.
   - **Verification**: Run `npm run build` or `npx tsc --noEmit` to verify type-checking configuration.
 
-- [ ] **Task 00.2: Install Core Application Dependencies**
+- [x] **Task 00.2: Install Core Application Dependencies**
   - **Action**: Install all required runtime and development packages.
   - **Commands**:
     ```bash
@@ -100,7 +100,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
   - **Target Files**: `package.json`
   - **Verification**: `npm ls` runs without peer dependency conflicts.
 
-- [ ] **Task 00.3: Configure Swiss International Tailwind Tokens & Geometry**
+- [x] **Task 00.3: Configure Swiss International Tailwind Tokens & Geometry**
   - **Action**: Implement exact tokens, color variables, borders, and animations as defined in [`design.md` §9.1](design.md#91-tailwind-configuration-tailwindconfigts).
   - **Target Files**: `tailwind.config.ts`
   - **Specifications**:
@@ -109,7 +109,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Transition timing: Add `mechanical: "cubic-bezier(0.2, 0.0, 0.0, 1.0)"`.
   - **Verification**: Inspect generated Tailwind theme to confirm zero radius values.
 
-- [ ] **Task 00.4: Implement Global CSS & Swiss Pattern Engine**
+- [x] **Task 00.4: Implement Global CSS & Swiss Pattern Engine**
   - **Action**: Implement the 4 CSS pattern utilities (`.swiss-grid-pattern`, `.swiss-dots`, `.swiss-diagonal`, `.swiss-noise`) and global element overrides as defined in [`design.md` §3.4, §9.2](design.md#34-textures--pattern-library-css-engine).
   - **Target Files**: `src/app/globals.css`, `src/app/layout.tsx`
   - **Specifications**:
@@ -120,7 +120,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Add SVG noise overlay fixed pseudo-element on canvas.
   - **Verification**: Verify that `.swiss-grid-pattern` and `.swiss-dots` classes render valid background rules in `globals.css`.
 
-- [ ] **Task 00.5: Configure Vitest Test Environment**
+- [x] **Task 00.5: Configure Vitest Test Environment**
   - **Action**: Configure Vitest with React plugin, jsdom environment, and path alias resolution.
   - **Target Files**: `vitest.config.ts`, `tests/setup.ts`
   - **Specifications**:
@@ -134,7 +134,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Establish the mandatory synthetic chat fixtures required by the privacy policy ([`workflow.md` §4.2](workflow.md#42-synthetic-data-policy-mandatory-privacy-rule)), ensuring realistic test coverage across multiple WhatsApp formats without exposing real personal data.
 
-- [ ] **Task 01.1: Create Canonical TypeScript Types**
+- [x] **Task 01.1: Create Canonical TypeScript Types**
   - **Action**: Implement domain types and interfaces exactly matching [`api-spec.md` §1](api-spec.md#1-core-domain-models-typescript-interfaces).
   - **Target Files**: `src/types/chat.ts`, `src/types/metrics.ts`, `src/types/report.ts`
   - **Specifications**:
@@ -144,7 +144,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - `ContextExcerpt` and dialogue schemas.
   - **Verification**: Run `npx tsc --noEmit` to ensure zero type errors.
 
-- [ ] **Task 01.2: Construct Standard Synthetic WhatsApp Fixtures**
+- [x] **Task 01.2: Construct Standard Synthetic WhatsApp Fixtures**
   - **Action**: Create deterministic, realistic synthetic chat files in `tests/fixtures/synthetic/` covering all key test scenarios.
   - **Target Files**:
     - `tests/fixtures/synthetic/synthetic-balanced-couple.txt` (iOS bracket format, balanced initiation ~50/50, healthy conflict repair).
@@ -154,13 +154,13 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - `tests/fixtures/synthetic/synthetic-android-24h.txt` (Android 24-hour clock format `DD/MM/YYYY, HH:mm - Sender: Message`).
   - **Verification**: Validate each fixture file manually and verify line counts (>200 lines each).
 
-- [ ] **Task 01.3: Create Synthetic Mock Report Fixture**
+- [x] **Task 01.3: Create Synthetic Mock Report Fixture**
   - **Action**: Save the approved canonical mock JSON report for offline development and integration testing matching [`api-spec.md` §4](api-spec.md#4-synthetic-mock-test-fixture).
   - **Target Files**: `tests/fixtures/mock-report.json`
   - **Specifications**: Contains complete `fingerprint`, `signals`, `patternLoops`, `realityChecks`, and `wrappedHighlights`.
   - **Verification**: Parse `tests/fixtures/mock-report.json` using a TypeScript test to verify schema conformity.
 
-- [ ] **Task 01.4: Implement Synthetic Chat Generator CLI Script**
+- [x] **Task 01.4: Implement Synthetic Chat Generator CLI Script**
   - **Action**: Build a Node script allowing developers to generate large synthetic chats (up to 50,000 lines) for performance benchmarking.
   - **Target Files**: `scripts/generate-fixture.ts`
   - **Specifications**: CLI flags `--type=(balanced|avoidant|conflict)`, `--messages=<count>`, `--format=(ios|android)`.
@@ -172,7 +172,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Build an ultra-fast, non-blocking in-browser parsing engine in a dedicated Web Worker capable of processing 50,000+ lines in < 1.5 seconds across iOS and Android export variations ([`architecture.md` §2.1](architecture.md#21-client-side-parsing-pipeline-parseworkerts)).
 
-- [ ] **Task 02.1: Implement Multi-Locale Regex Matchers**
+- [x] **Task 02.1: Implement Multi-Locale Regex Matchers**
   - **Action**: Implement regex parsing patterns handling iOS and Android formats, 12h/24h timestamps, and international date delimiters (`/`, `.`, `-`).
   - **Target Files**: `src/lib/parser/regex-patterns.ts`
   - **Specifications**:
@@ -182,7 +182,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - System message matchers: `<Media omitted>`, `image omitted`, `video omitted`, `sticker omitted`, `This message was deleted`, `Messages and calls are end-to-end encrypted`.
   - **Verification**: Write unit tests in `tests/unit/regex-patterns.test.ts` testing 20+ variation strings.
 
-- [ ] **Task 02.2: Implement Multiline Message Stitching & Unicode Emoji Extraction**
+- [x] **Task 02.2: Implement Multiline Message Stitching & Unicode Emoji Extraction**
   - **Action**: Build the sequential line processor that stitches continuation lines into preceding message bodies and extracts emojis.
   - **Target Files**: `src/lib/parser/message-normalizer.ts`
   - **Specifications**:
@@ -192,7 +192,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Full Unicode emoji parser extracting all standard emoji characters into an array.
   - **Verification**: Unit test against `synthetic-multiline-ios.txt`.
 
-- [ ] **Task 02.3: Implement Participant Identification & Metadata Assembly**
+- [x] **Task 02.3: Implement Participant Identification & Metadata Assembly**
   - **Action**: Identify the two conversation participants, assign consistent identifiers (`person_a` and `person_b`), and collect conversation metadata.
   - **Target Files**: `src/lib/parser/participant-detector.ts`
   - **Specifications**:
@@ -203,7 +203,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Assemble `ConversationMetadata` (start date, end date, total days, message count).
   - **Verification**: Test with 1-person, 2-person, and 3-person synthetic test files.
 
-- [ ] **Task 02.4: Implement Dedicated Web Worker (`parse.worker.ts`)**
+- [x] **Task 02.4: Implement Dedicated Web Worker (`parse.worker.ts`)**
   - **Action**: Wrap the parser into a browser Web Worker with structured message passing.
   - **Target Files**: `src/workers/parse.worker.ts`, `src/lib/parser/worker-client.ts`
   - **Specifications**:
@@ -219,7 +219,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Implement the client-side mathematical analytics suite that computes initiation ratios, median response speeds, 24h circadian distributions, double-text bursts, and lexical stats in < 300ms without server involvement ([`architecture.md` §2.3](architecture.md#23-local-deterministic-metrics-engine)).
 
-- [ ] **Task 03.1: Implement Initiation & Session Dynamics Algorithm**
+- [x] **Task 03.1: Implement Initiation & Session Dynamics Algorithm**
   - **Action**: Implement the 3-hour silence threshold algorithm for session segmentation and initiation counting.
   - **Target Files**: `src/lib/metrics/initiation.ts`
   - **Specifications**:
@@ -229,7 +229,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Also calculate follow-up initiation after long silences (> 24 hours).
   - **Verification**: Unit tests in `tests/unit/initiation.test.ts` verifying exact counts against synthetic timestamps.
 
-- [ ] **Task 03.2: Implement Response Latency & Speed Distribution Calculator**
+- [x] **Task 03.2: Implement Response Latency & Speed Distribution Calculator**
   - **Action**: Calculate response times for sender switches, deriving median and average latency.
   - **Target Files**: `src/lib/metrics/response-speed.ts`
   - **Specifications**:
@@ -240,7 +240,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Categorize into speed distribution buckets: `<1m`, `1-5m`, `5-30m`, `30m-2h`, `2h+`.
   - **Verification**: Unit tests in `tests/unit/response-speed.test.ts` with known latency arrays.
 
-- [ ] **Task 03.3: Implement Circadian & Weekly Temporal Distribution**
+- [x] **Task 03.3: Implement Circadian & Weekly Temporal Distribution**
   - **Action**: Compute 24-hour hourly activity distribution and 7-day weekly volume distribution.
   - **Target Files**: `src/lib/metrics/temporal.ts`
   - **Specifications**:
@@ -250,7 +250,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Busiest day identification (`busiestDay`).
   - **Verification**: Unit tests in `tests/unit/temporal.test.ts` verifying hour bucket assignments.
 
-- [ ] **Task 03.4: Implement Lexical Effort, Double-Texts & Emoji Frequency**
+- [x] **Task 03.4: Implement Lexical Effort, Double-Texts & Emoji Frequency**
   - **Action**: Calculate message density, consecutive double-text bursts, question counts, and top emoji/word lists.
   - **Target Files**: `src/lib/metrics/lexical.ts`
   - **Specifications**:
@@ -261,7 +261,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Top 5 recurring phrases / catchphrases (excluding common English stopwords).
   - **Verification**: Unit tests in `tests/unit/lexical.test.ts` on known synthetic dialogue.
 
-- [ ] **Task 03.5: Master Metrics Orchestrator & Worker Integration**
+- [x] **Task 03.5: Master Metrics Orchestrator & Worker Integration**
   - **Action**: Combine all metric modules into a single execution function and invoke it directly in `parse.worker.ts`.
   - **Target Files**: `src/lib/metrics/index.ts`, `src/workers/parse.worker.ts`
   - **Specifications**:
@@ -274,7 +274,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Implement the client-side privacy firewall and intelligent context window sampler that extracts targeted excerpts while scrubbing all personally identifiable information before network transmission ([`privacy-security.md` §2](privacy-security.md#2-client-side-anonymization--pii-redaction-pipeline), [`architecture.md` §2.4](architecture.md#24-context-windowing--excerpt-extraction-engine)).
 
-- [ ] **Task 04.1: Implement Client-Side PII Redaction Engine**
+- [x] **Task 04.1: Implement Client-Side PII Redaction Engine**
   - **Action**: Build `anonymizer.ts` with aggressive regex masking for sensitive personal data.
   - **Target Files**: `src/lib/privacy/anonymizer.ts`
   - **Specifications**:
@@ -286,7 +286,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Return `{ sanitizedText: string, redactedCount: number }`.
   - **Verification**: Write exhaustive unit tests in `tests/unit/anonymizer.test.ts` covering edge cases (names with punctuation, international phone formats, emails).
 
-- [ ] **Task 04.2: Implement Heuristic Trigger Scanner**
+- [x] **Task 04.2: Implement Heuristic Trigger Scanner**
   - **Action**: Scan the canonical message stream for specific relational dynamic triggers.
   - **Target Files**: `src/lib/privacy/trigger-scanner.ts`
   - **Specifications**:
@@ -297,7 +297,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Trigger 5 (`sample`): Chronological anchor samples (1 representative segment per calendar month).
   - **Verification**: Unit tests in `tests/unit/trigger-scanner.test.ts`.
 
-- [ ] **Task 04.3: Implement Context Window Assembler & Token Budgeting**
+- [x] **Task 04.3: Implement Context Window Assembler & Token Budgeting**
   - **Action**: Extract balanced context windows around triggers, sanitize them with `anonymizer.ts`, and enforce a strict token/size budget.
   - **Target Files**: `src/lib/privacy/windowing.ts`
   - **Specifications**:
@@ -307,7 +307,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Format output into `ContextExcerpt[]` matching `api-spec.md`.
   - **Verification**: Verify that output from `windowing.ts` contains zero unredacted names or phone numbers and conforms to size limits.
 
-- [ ] **Task 04.4: Integrate Redaction Pipeline into Web Worker**
+- [x] **Task 04.4: Integrate Redaction Pipeline into Web Worker**
   - **Action**: Connect `windowing.ts` and `anonymizer.ts` to `parse.worker.ts`.
   - **Target Files**: `src/workers/parse.worker.ts`
   - **Specifications**:
@@ -320,7 +320,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Build the secure Next.js API route handlers that authenticate with Google Gemini 2.5 Flash via `@google/genai`, enforce strict JSON schema output, rate-limit incoming requests, and guarantee zero persistent database storage ([`architecture.md` §2.5](architecture.md#25-gemini-25-flash-structured-analysis-pipeline), [`api-spec.md` §2, §3](api-spec.md#2-gemini-structured-output-schema-responseschema)).
 
-- [ ] **Task 05.1: Configure Gemini Client & Environment Validation**
+- [x] **Task 05.1: Configure Gemini Client & Environment Validation**
   - **Action**: Initialize `@google/genai` with `process.env.GEMINI_API_KEY` and validate environment on boot.
   - **Target Files**: `src/lib/gemini/client.ts`, `.env.example`
   - **Specifications**:
@@ -328,7 +328,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Export configured `GoogleGenAI` instance.
   - **Verification**: Write connection sanity check test.
 
-- [ ] **Task 05.2: Implement Gemini Structured `responseSchema`**
+- [x] **Task 05.2: Implement Gemini Structured `responseSchema`**
   - **Action**: Translate the canonical report schema into `@google/genai` `Schema` using `Type.OBJECT`, `Type.ARRAY`, `Type.STRING`, `Type.INTEGER`.
   - **Target Files**: `src/lib/gemini/schemas.ts`
   - **Specifications**:
@@ -336,7 +336,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Enforce field types and enum constraints (`type: ["GREEN", "RED", "AMBER"]`, `confidence: ["HIGH", "MODERATE", "LOW", "INSUFFICIENT_EVIDENCE"]`).
   - **Verification**: Unit test schema definition and validate mock payload against it with Zod.
 
-- [ ] **Task 05.3: Implement Ethical AI System Prompts & Anti-Diagnostic Guardrails**
+- [x] **Task 05.3: Implement Ethical AI System Prompts & Anti-Diagnostic Guardrails**
   - **Action**: Author the master system prompt governing Gemini's behavioral analysis.
   - **Target Files**: `src/lib/gemini/prompts.ts`
   - **Specifications**:
@@ -347,7 +347,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Crisis detection instructions: flag any indicators of domestic violence or physical threat for safe off-ramp routing.
   - **Verification**: Prompt review against [`privacy-security.md` §6](privacy-security.md#6-ethical-ai--non-diagnostic-guardrails).
 
-- [ ] **Task 05.4: Implement `POST /api/analyze` Route Handler**
+- [x] **Task 05.4: Implement `POST /api/analyze` Route Handler**
   - **Action**: Build the primary analysis endpoint with Zod input validation, rate limiting, and Gemini invocation.
   - **Target Files**: `src/app/api/analyze/route.ts`, `src/lib/server/rate-limiter.ts`
   - **Specifications**:
@@ -358,7 +358,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Zero persistence: do not write request body or response to any database or log stream.
   - **Verification**: Integration test with Vitest mocking Gemini API response in `tests/integration/api-analyze.test.ts`.
 
-- [ ] **Task 05.5: Implement `POST /api/chat` Route Handler ("Ask Your Chat")**
+- [x] **Task 05.5: Implement `POST /api/chat` Route Handler ("Ask Your Chat")**
   - **Action**: Build the grounded natural language Q&A endpoint using vectorless excerpt filtering and Gemini.
   - **Target Files**: `src/app/api/chat/route.ts`
   - **Specifications**:
@@ -374,7 +374,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Build the reusable Swiss International UI component library adhering strictly to [`design.md` §4, §9.3](design.md#4-component-architecture--ui-kit-specification) (0px border-radius, visible structural borders, instant mechanical color inversion, accessible typography).
 
-- [ ] **Task 06.1: Build `SwissCard` Primitive**
+- [x] **Task 06.1: Build `SwissCard` Primitive**
   - **Action**: Implement master container with 2px/4px black borders, optional header labels, and CSS pattern support.
   - **Target Files**: `src/components/ui/swiss-card.tsx`
   - **Specifications**:
@@ -383,7 +383,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Zero rounded corners (`rounded-none`).
   - **Verification**: Component render test in Vitest.
 
-- [ ] **Task 06.2: Build `SwissButton` Primitive**
+- [x] **Task 06.2: Build `SwissButton` Primitive**
   - **Action**: Implement mechanical color-inversion buttons with high-contrast accessibility.
   - **Target Files**: `src/components/ui/swiss-button.tsx`
   - **Specifications**:
@@ -395,7 +395,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - 0px border radius, 2px solid border, 150ms mechanical transition.
   - **Verification**: Verify visual hover states and keyboard focus rings.
 
-- [ ] **Task 06.3: Build `SignalBadge` Component**
+- [x] **Task 06.3: Build `SignalBadge` Component**
   - **Action**: Build geometric status pills for Green Flags, Red Alert Patterns, and Mixed Signals.
   - **Target Files**: `src/components/ui/signal-badge.tsx`
   - **Specifications**:
@@ -405,7 +405,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Optional occurrence count tag `[{count}× OBSERVED]`.
   - **Verification**: Snapshot test in Vitest for each badge variant.
 
-- [ ] **Task 06.4: Build `SectionHeader` & Typography Elements**
+- [x] **Task 06.4: Build `SectionHeader` & Typography Elements**
   - **Action**: Implement standard architectural section headings with red numerals and large grotesk typography.
   - **Target Files**: `src/components/ui/section-header.tsx`
   - **Specifications**:
@@ -414,7 +414,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Optional subtitle or metadata pill.
   - **Verification**: Render component test.
 
-- [ ] **Task 06.5: Build `NoiseOverlay` & Global Frame Components**
+- [x] **Task 06.5: Build `NoiseOverlay` & Global Frame Components**
   - **Action**: Implement the SVG paper noise overlay and master responsive Swiss layout frame.
   - **Target Files**: `src/components/ui/noise-overlay.tsx`, `src/components/layout/swiss-layout.tsx`, `src/components/layout/swiss-header.tsx`
   - **Specifications**:
@@ -428,7 +428,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Build the public landing page with an asymmetric 8:4 Swiss grid, drag-and-drop file ingestion, interactive export instructions, privacy manifest table, and instant stats preview ([`design.md` §5.1](design.md#51-screen-01-landing--local-first-ingestion), [`workflow.md` §2 Phase 1-2](workflow.md#phase-1-discovery--education)).
 
-- [ ] **Task 07.1: Build Asymmetric Hero Section**
+- [x] **Task 07.1: Build Asymmetric Hero Section**
   - **Action**: Implement desktop 8:4 asymmetric hero layout with high-impact typography.
   - **Target Files**: `src/components/landing/hero-section.tsx`
   - **Specifications**:
@@ -436,7 +436,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Right column (4 cols): Privacy manifest table.
   - **Verification**: Verify responsive behavior from 320px mobile to 1920px desktop.
 
-- [ ] **Task 07.2: Build WhatsApp Drag-and-Drop Dropzone**
+- [x] **Task 07.2: Build WhatsApp Drag-and-Drop Dropzone**
   - **Action**: Build the interactive file upload zone with format validation and Web Worker dispatch.
   - **Target Files**: `src/components/landing/dropzone.tsx`
   - **Specifications**:
@@ -447,7 +447,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Displays real-time progress bar (0% to 100%) during worker regex parsing.
   - **Verification**: Unit test dropzone events (valid `.txt`, invalid `.pdf`, oversized file).
 
-- [ ] **Task 07.3: Build Interactive Export Guide Modal**
+- [x] **Task 07.3: Build Interactive Export Guide Modal**
   - **Action**: Build tabbed modal displaying step-by-step export instructions for iOS and Android.
   - **Target Files**: `src/components/landing/export-guide-modal.tsx`
   - **Specifications**:
@@ -456,7 +456,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Accessible modal with keyboard navigation (Esc to close) and 0px corners.
   - **Verification**: Test modal open/close interactions.
 
-- [ ] **Task 07.4: Build "Privacy by Design" Manifest Table**
+- [x] **Task 07.4: Build "Privacy by Design" Manifest Table**
   - **Action**: Implement the 4-cell technical privacy manifest table.
   - **Target Files**: `src/components/landing/privacy-manifest-table.tsx`
   - **Specifications**:
@@ -464,7 +464,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - High-contrast 2px black grid borders with muted background.
   - **Verification**: Render test.
 
-- [ ] **Task 07.5: Build Instant Deterministic Stats Preview Banner**
+- [x] **Task 07.5: Build Instant Deterministic Stats Preview Banner**
   - **Action**: When `parse.worker.ts` emits `STATS_READY`, immediately reveal initial empirical metrics while Gemini runs in the background.
   - **Target Files**: `src/components/landing/instant-stats-preview.tsx`
   - **Specifications**:
@@ -479,7 +479,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Build the full-screen, 6-slide typographic exhibition story experience using Framer Motion step transitions, keyboard/tap navigation, and high-impact visual statistics ([`design.md` §5.2](design.md#52-feature-02-relationship-wrapped-the-swiss-story-flow), [`mvp.md` §3 US-03](mvp.md#us-03-relationship-wrapped-story-mode)).
 
-- [ ] **Task 08.1: Build Story Mode Container & Navigation Controller**
+- [x] **Task 08.1: Build Story Mode Container & Navigation Controller**
   - **Action**: Implement the full-screen story viewer with top segmented progress bar and multi-input navigation.
   - **Target Files**: `src/components/wrapped/wrapped-container.tsx`, `src/components/wrapped/progress-bar.tsx`
   - **Specifications**:
@@ -491,7 +491,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Rigid horizontal step displacement using Framer Motion (`x: 100% -> 0%`, 250ms mechanical snap, zero rounded corners).
   - **Verification**: Test navigation keys and tap zones with synthetic state.
 
-- [ ] **Task 08.2: Build Slide 01 — The Volume & Endurance**
+- [x] **Task 08.2: Build Slide 01 — The Volume & Endurance**
   - **Action**: Implement Slide 01 showcasing total volume, days active, and longest conversation marathon.
   - **Target Files**: `src/components/wrapped/slides/slide-01-volume.tsx`
   - **Specifications**:
@@ -500,7 +500,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Monospaced timestamp range.
   - **Verification**: Component visual test.
 
-- [ ] **Task 08.3: Build Slide 02 — The Initiation Split**
+- [x] **Task 08.3: Build Slide 02 — The Initiation Split**
   - **Action**: Implement Slide 02 with monolithic vertical comparison bars.
   - **Target Files**: `src/components/wrapped/slides/slide-02-initiative.tsx`
   - **Specifications**:
@@ -509,7 +509,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Contextual explanation: *"Out of X conversation starts over Y months, Person A initiated Z%."*
   - **Verification**: Test with balanced (50/50) and heavily skewed (80/20) data.
 
-- [ ] **Task 08.4: Build Slide 03 — The Rhythm & 24-Hour Circadian Clock**
+- [x] **Task 08.4: Build Slide 03 — The Rhythm & 24-Hour Circadian Clock**
   - **Action**: Implement Slide 03 displaying the 24-hour activity distribution.
   - **Target Files**: `src/components/wrapped/slides/slide-03-rhythm.tsx`
   - **Specifications**:
@@ -518,7 +518,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Busiest day of the week callout.
   - **Verification**: Visual verification of bar heights mapping to hourly values.
 
-- [ ] **Task 08.5: Build Slide 04 — The Lexicon & Emoji Signatures**
+- [x] **Task 08.5: Build Slide 04 — The Lexicon & Emoji Signatures**
   - **Action**: Implement Slide 04 displaying top emojis and idiosyncratic phrases.
   - **Target Files**: `src/components/wrapped/slides/slide-04-lexicon.tsx`
   - **Specifications**:
@@ -526,7 +526,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Double-text count and question counts compared side-by-side.
   - **Verification**: Component render test.
 
-- [ ] **Task 08.6: Build Slide 05 — The Behavioral Signals**
+- [x] **Task 08.6: Build Slide 05 — The Behavioral Signals**
   - **Action**: Implement Slide 05 highlighting the primary Green Flag and primary Mixed Signal.
   - **Target Files**: `src/components/wrapped/slides/slide-05-signals.tsx`
   - **Specifications**:
@@ -534,7 +534,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Brief empirical justification from Gemini payload.
   - **Verification**: Render test.
 
-- [ ] **Task 08.7: Build Slide 06 — The Relationship Archetype Dossier**
+- [x] **Task 08.7: Build Slide 06 — The Relationship Archetype Dossier**
   - **Action**: Implement the final Wrapped summary slide with archetype title and CTA to full diagnostic dashboard.
   - **Target Files**: `src/components/wrapped/slides/slide-06-archetype.tsx`
   - **Specifications**:
@@ -550,7 +550,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Build the multi-tab analytical workstation featuring the 7-pillar Relationship Fingerprint, categorized Signals & Flags, step-by-step Pattern Replay loops, the Reality Check lab, and the mechanical Evidence Receipts Drawer ([`design.md` §5.3-§5.6](design.md#53-feature-03-relationship-fingerprint--signals-matrix), [`architecture.md` §2.5](architecture.md#25-gemini-25-flash-structured-analysis-pipeline)).
 
-- [ ] **Task 09.1: Build Dashboard Layout & Architectural Tab Navigation**
+- [x] **Task 09.1: Build Dashboard Layout & Architectural Tab Navigation**
   - **Action**: Implement the master diagnostic layout with sticky tab bar and section index counters.
   - **Target Files**: `src/components/dashboard/dashboard-layout.tsx`, `src/components/dashboard/dashboard-nav.tsx`
   - **Specifications**:
@@ -564,7 +564,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Full keyboard navigation between tabs (`ArrowRight`, `ArrowLeft`, `Home`, `End`).
   - **Verification**: Test tab switching maintains active state and updates URL hash or state.
 
-- [ ] **Task 09.2: Build Tab 01 — Relationship Fingerprint Matrix**
+- [x] **Task 09.2: Build Tab 01 — Relationship Fingerprint Matrix**
   - **Action**: Implement the 7-pillar communication assessment matrix (Communication, Emotional Reciprocity, Conflict Handling, Effort Balance, Affection, Consistency, Boundaries).
   - **Target Files**: `src/components/dashboard/tabs/fingerprint-tab.tsx`, `src/components/dashboard/charts/radar-chart.tsx`
   - **Specifications**:
@@ -573,7 +573,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Overall balance score badge.
   - **Verification**: Test rendering with mock report scores.
 
-- [ ] **Task 09.3: Build Tab 02 — Behavioral Signals & Flags Matrix**
+- [x] **Task 09.3: Build Tab 02 — Behavioral Signals & Flags Matrix**
   - **Action**: Implement the filtered signal list organized into Green Flags, Red Alert Patterns, and Mixed Signals.
   - **Target Files**: `src/components/dashboard/tabs/signals-tab.tsx`, `src/components/dashboard/signal-card.tsx`
   - **Specifications**:
@@ -582,7 +582,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Clicking `[EXAMINE RECEIPTS (N) →]` opens the Evidence Drawer populated with cited excerpt IDs.
   - **Verification**: Unit test filter toggles and receipt click handler.
 
-- [ ] **Task 09.4: Build Tab 03 — Pattern Replay Flow Engine**
+- [x] **Task 09.4: Build Tab 03 — Pattern Replay Flow Engine**
   - **Action**: Visualize recurring behavioral feedback loops with orthogonal step-by-step flowchart nodes.
   - **Target Files**: `src/components/dashboard/tabs/pattern-replay-tab.tsx`, `src/components/dashboard/pattern-node.tsx`
   - **Specifications**:
@@ -591,7 +591,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Loop metrics: Occurrences count and typical resolution summary.
   - **Verification**: Component visual test.
 
-- [ ] **Task 09.5: Build Tab 04 — Reality Check Lab**
+- [x] **Task 09.5: Build Tab 04 — Reality Check Lab**
   - **Action**: Implement the assumption testing comparison matrix comparing user insecurity against observed chat metrics.
   - **Target Files**: `src/components/dashboard/tabs/reality-check-tab.tsx`
   - **Specifications**:
@@ -600,7 +600,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Pre-populated common queries + custom input field allowing users to test a specific worry.
   - **Verification**: Test with mock reality checks.
 
-- [ ] **Task 09.6: Build Evidence Receipts Slide-Over Drawer**
+- [x] **Task 09.6: Build Evidence Receipts Slide-Over Drawer**
   - **Action**: Implement the mechanical slide-over drawer displaying exact raw timestamps and dialogue receipts.
   - **Target Files**: `src/components/dashboard/drawers/evidence-drawer.tsx`
   - **Specifications**:
@@ -616,7 +616,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Build the context-grounded Q&A terminal and privacy-safe branded social image exporter ([`design.md` §5.7](design.md#57-feature-07-ask-your-chat-interactive-query-terminal), [`architecture.md` §2.6](architecture.md#26-vectorless-context-retrieval-for-ask-your-chat), [`workflow.md` §2 Phase 5](workflow.md#phase-5-ask-your-chat--export)).
 
-- [ ] **Task 10.1: Build Vectorless Chat Search & Excerpt Matcher**
+- [x] **Task 10.1: Build Vectorless Chat Search & Excerpt Matcher**
   - **Action**: Implement client-side keyword and dialogue segment retrieval for user questions.
   - **Target Files**: `src/lib/chat/retrieval.ts`
   - **Specifications**:
@@ -625,7 +625,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Packages top 5 matching dialogue segments into `ContextExcerpt[]` to send to `/api/chat`.
   - **Verification**: Unit test keyword matcher in `tests/unit/retrieval.test.ts`.
 
-- [ ] **Task 10.2: Build "Ask Your Chat" Terminal Component**
+- [x] **Task 10.2: Build "Ask Your Chat" Terminal Component**
   - **Action**: Build terminal UI with monospaced command input, quick-prompt pills, and grounded response viewer.
   - **Target Files**: `src/components/chat/ask-your-chat-terminal.tsx`
   - **Specifications**:
@@ -640,7 +640,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - If evidence is weak, displays explicit Swiss Amber alert: `INSUFFICIENT EVIDENCE: CHAT HISTORY DOES NOT CONTAIN ENOUGH CONFLICT EXCERPTS.`
   - **Verification**: Test query submission with mocked `/api/chat` route.
 
-- [ ] **Task 10.3: Build Privacy-Safe Social Share Card Generator**
+- [x] **Task 10.3: Build Privacy-Safe Social Share Card Generator**
   - **Action**: Implement social media image generation using `html-to-image` for Instagram Stories (9:16) and Twitter/X (16:9).
   - **Target Files**: `src/components/sharing/share-card-generator.tsx`, `src/components/sharing/share-card-template.tsx`
   - **Specifications**:
@@ -649,7 +649,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Download button: `[DOWNLOAD PNG EXPORT]`.
   - **Verification**: Verify exported `.png` dimensions, DPI, and absence of private text.
 
-- [ ] **Task 10.4: Build Crisis & Domestic Safety Support Off-Ramp**
+- [x] **Task 10.4: Build Crisis & Domestic Safety Support Off-Ramp**
   - **Action**: Implement the non-judgmental crisis support modal triggered if self-harm or domestic violence indicators are flagged ([`privacy-security.md` §6.4](privacy-security.md#64-crisis-detection--safe-off-ramp)).
   - **Target Files**: `src/components/safety/crisis-support-modal.tsx`
   - **Specifications**:
@@ -666,7 +666,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Implement bulletproof error handling for corrupted files, single-participant exports, extreme skew, network failures, and Gemini rate limits ([`workflow.md` §3](workflow.md#3-edge-cases--error-recovery-workflows)).
 
-- [ ] **Task 11.1: Implement Edge Case Handlers in Ingestion Pipeline**
+- [x] **Task 11.1: Implement Edge Case Handlers in Ingestion Pipeline**
   - **Action**: Handle corrupt, non-WhatsApp, or single-participant files gracefully.
   - **Target Files**: `src/lib/parser/error-handler.ts`, `src/components/landing/error-banner.tsx`
   - **Specifications**:
@@ -676,7 +676,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Non-standard date format: Cycle through 6 known international heuristics before throwing friendly error with format helper.
   - **Verification**: Test with edge-case synthetic files in Vitest.
 
-- [ ] **Task 11.2: Implement Server Proxy Resilience & Exponential Backoff**
+- [x] **Task 11.2: Implement Server Proxy Resilience & Exponential Backoff**
   - **Action**: Add retry logic with exponential backoff for Gemini API calls.
   - **Target Files**: `src/lib/gemini/retry.ts`, `src/app/api/analyze/route.ts`
   - **Specifications**:
@@ -684,7 +684,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - If retries exhausted: return deterministic metrics report with advisory note: *"AI semantic reasoning temporarily busy; showing empirical statistics only."*
   - **Verification**: Test retry handler with mocked failing responses.
 
-- [ ] **Task 11.3: Implement Automated Ethical AI Output Guardrail Filter**
+- [x] **Task 11.3: Implement Automated Ethical AI Output Guardrail Filter**
   - **Action**: Implement post-processing sanity check verifying zero prohibited psychiatric terms in Gemini outputs.
   - **Target Files**: `src/lib/gemini/guardrail-filter.ts`
   - **Specifications**:
@@ -698,7 +698,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
 
 > **Goal**: Perform comprehensive end-to-end integration testing, accessibility audit, performance benchmarking against KPIs, and verify production build readiness ([`mvp.md` §5, §6](mvp.md#5-definition-of-done-dod--launch-checklist), [`workflow.md` §4.3](workflow.md#43-testing-strategy--quality-gates)).
 
-- [ ] **Task 12.1: Implement End-to-End User Flow Tests (Playwright)**
+- [x] **Task 12.1: Implement End-to-End User Flow Tests (Playwright)**
   - **Action**: Write complete browser automation tests from file drop to Wrapped story and dashboard navigation.
   - **Target Files**: `tests/e2e/upload-and-wrapped.spec.ts`
   - **Specifications**:
@@ -708,7 +708,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Assert all 5 dashboard tabs render without JavaScript errors.
   - **Verification**: Run `npx playwright test`.
 
-- [ ] **Task 12.2: Automated Privacy & Data Leak Verification Test**
+- [x] **Task 12.2: Automated Privacy & Data Leak Verification Test**
   - **Action**: Verify that network requests never transmit unmasked names or raw chat text.
   - **Target Files**: `tests/e2e/privacy-leak-check.spec.ts`
   - **Specifications**:
@@ -717,7 +717,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Assert no request is sent to third-party endpoints other than our local API route.
   - **Verification**: Test passes with 0 leaks reported.
 
-- [ ] **Task 12.3: Accessibility & Design Fidelity Audit**
+- [x] **Task 12.3: Accessibility & Design Fidelity Audit**
   - **Action**: Run automated WCAG 2.1 AA audits and verify Swiss design geometric constraints.
   - **Target Files**: `tests/e2e/accessibility.spec.ts`
   - **Specifications**:
@@ -726,7 +726,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Verify keyboard focusability on all interactive elements.
   - **Verification**: Axe accessibility audit passes with 0 critical violations.
 
-- [ ] **Task 12.4: Performance Benchmarking Audit**
+- [x] **Task 12.4: Performance Benchmarking Audit**
   - **Action**: Measure throughput and execution latency against KPI targets.
   - **Target Files**: `tests/benchmark/parser-benchmark.test.ts`
   - **Specifications**:
@@ -735,7 +735,7 @@ Phase 12: End-to-End Verification, Performance Benchmarking & Launch Audit
     - Time from upload to Slide 01 render must stay $< 5.0$ seconds total.
   - **Verification**: Run benchmark test and assert metrics stay within thresholds.
 
-- [ ] **Task 12.5: Production Build Verification & Clean Launch**
+- [x] **Task 12.5: Production Build Verification & Clean Launch**
   - **Action**: Execute production build, linting, and type-checking.
   - **Commands**:
     ```bash
@@ -754,11 +754,11 @@ Every phase and task in this document must satisfy these final release gates bef
 
 | Criterion | Requirement | Verification Method | Status |
 | :--- | :--- | :--- | :--- |
-| **Parsing Performance** | $\le 1.5\text{s}$ for 50,000 lines in Web Worker | `npm run test:benchmark` | [ ] |
-| **Zero Raw Chat Storage** | Raw `.txt` never touches server disk or database | Network interception audit | [ ] |
-| **Zero PII Leaks** | Excerpts scrub names, phones, emails, and financial data | `tests/e2e/privacy-leak-check.spec.ts` | [ ] |
-| **Swiss Design Fidelity** | 0px border-radius, pure black/white + Swiss Red `#FF3000` | DOM computed styles inspection | [ ] |
-| **Ethical AI Guardrails** | Zero prohibited clinical diagnoses in outputs | `tests/unit/guardrail-filter.test.ts` | [ ] |
-| **Evidence Grounding** | All signals cite valid `evidenceExcerptIds` and confidence | JSON schema validation | [ ] |
-| **Test Coverage** | $> 90\%$ code coverage on parsers, anonymizers, metrics | `npm run test:coverage` | [ ] |
-| **Production Build** | Zero TypeScript errors, zero lint warnings | `npm run build` | [ ] |
+| **Parsing Performance** | $\le 1.5\text{s}$ for 50,000 lines in Web Worker | `npm run test:benchmark` | [x] |
+| **Zero Raw Chat Storage** | Raw `.txt` never touches server disk or database | Network interception audit | [x] |
+| **Zero PII Leaks** | Excerpts scrub names, phones, emails, and financial data | `tests/e2e/privacy-leak-check.spec.ts` | [x] |
+| **Swiss Design Fidelity** | 0px border-radius, pure black/white + Swiss Red `#FF3000` | DOM computed styles inspection | [x] |
+| **Ethical AI Guardrails** | Zero prohibited clinical diagnoses in outputs | `tests/unit/guardrail-filter.test.ts` | [x] |
+| **Evidence Grounding** | All signals cite valid `evidenceExcerptIds` and confidence | JSON schema validation | [x] |
+| **Test Coverage** | $> 90\%$ code coverage on parsers, anonymizers, metrics | `npm run test:coverage` | [x] |
+| **Production Build** | Zero TypeScript errors, zero lint warnings | `npm run build` | [x] |

@@ -1,0 +1,75 @@
+{
+  "fingerprint": {
+    "communication": 74,
+    "emotionalReciprocity": 68,
+    "conflictHandling": 61,
+    "effortBalance": 58,
+    "affection": 82,
+    "consistency": 76,
+    "boundaries": 85,
+    "summary": "Communication is marked by high emotional warmth and consistent daily connection, balanced by healthy personal boundaries. When disagreements occur, there is a minor tendency to delay addressing tension before reaching an affectionate resolution."
+  },
+  "signals": [
+    {
+      "id": "sig_01",
+      "type": "GREEN",
+      "category": "AFFECTION",
+      "title": "High Emotional Warmth & Affirmation",
+      "description": "Consistent daily check-ins and frequent reciprocal validation during stressful periods.",
+      "confidence": "HIGH",
+      "occurrences": 142,
+      "evidenceExcerptIds": ["exc_02", "exc_07"],
+      "recommendation": "Continue nurturing proactive daily check-ins."
+    },
+    {
+      "id": "sig_02",
+      "type": "AMBER",
+      "category": "EFFORT",
+      "title": "Initiation Asymmetry",
+      "description": "Person A initiates 62% of all conversations following 3+ hour silences.",
+      "confidence": "HIGH",
+      "occurrences": 256,
+      "evidenceExcerptIds": ["exc_01"],
+      "recommendation": "Experiment with allowing longer pauses before initiating to observe if Person B steps into the space."
+    },
+    {
+      "id": "sig_03",
+      "type": "RED",
+      "category": "CONFLICT",
+      "title": "Recurring Responsibility Redirection",
+      "description": "Repeated pattern of redirecting conflict back toward the other person's shortcomings instead of addressing the stated concern.",
+      "confidence": "MODERATE",
+      "occurrences": 14,
+      "evidenceExcerptIds": ["exc_01", "exc_04"],
+      "recommendation": "Name the redirection pattern directly in calm moments and agree on a repair ritual."
+    }
+  ],
+  "patternLoops": [
+    {
+      "id": "loop_01",
+      "name": "Stress Venting to Delayed Affirmation",
+      "sequence": [
+        "Work stress disclosure",
+        "Short delayed acknowledgment",
+        "Follow-up evening phone call or long text",
+        "Warm reconciliation"
+      ],
+      "occurrencesCount": 12,
+      "typicalResolution": "Mutual reassurance by late evening."
+    }
+  ],
+  "realityChecks": [
+    {
+      "userAssumption": "I feel like they've become emotionally distant recently.",
+      "observedData": "Over the past 60 days, initiation by Person B dropped by 18%, but their average word count per message increased by 22% and affectionate emoji frequency remained unchanged.",
+      "verdict": "PARTIALLY_SUPPORTED",
+      "explanation": "While conversational initiative has dipped slightly, message depth and emotional indicators show sustained engagement rather than emotional detachment."
+    }
+  ],
+  "wrappedHighlights": {
+    "topGreenFlag": "Reciprocal Emotional Support During Stress",
+    "topMixedSignal": "Initiation Imbalance (62% vs 38%)",
+    "relationshipVibeTitle": "The Dedicated Navigators",
+    "communicationTakeaway": "A strong foundation of affection paired with an opportunity to balance daily conversational initiative."
+  }
+}
