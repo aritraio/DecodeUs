@@ -1,17 +1,21 @@
-import { describe, expect, it } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { AnalysisProvider } from "@/lib/store/analysis-context";
 import { WrappedContainer } from "@/components/wrapped/wrapped-container";
 import { Slide01Volume } from "@/components/wrapped/slides/slide-01-volume";
 import { Slide02Initiative } from "@/components/wrapped/slides/slide-02-initiative";
 import { Slide03Rhythm } from "@/components/wrapped/slides/slide-03-rhythm";
 import { Slide04Lexicon } from "@/components/wrapped/slides/slide-04-lexicon";
+import { Slide06Archetype } from "@/components/wrapped/slides/slide-06-archetype";
+import confetti from "canvas-confetti";
 import { runFullPipeline } from "@/lib/parser/pipeline";
 import { loadMockReport } from "@/lib/server/mock-report";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import * as React from "react";
 import { AnalysisProvider as P, useAnalysis } from "@/lib/store/analysis-context";
+
+vi.mock("canvas-confetti", () => ({ default: vi.fn() }));
 
 function SeededProvider({ children }: { children: React.ReactNode }) {
   return (
@@ -133,4 +137,44 @@ describe("wrapped story mode (tasks 08.1–08.7)", () => {
     );
     expect(screen.getAllByText(/double-texts/i)).toHaveLength(2);
   });
+
+  it("slide 06 fires confetti and exposes both dashboard + share-card CTAs", async () => {
+    const raw = readFileSync(
+      join(process.cwd(), "tests/fixtures/synthetic/synthetic-balanced-couple.txt"),
+      "utf-8"
+    );
+    const { metrics, metadata } = runFullPipeline(raw);
+    const getContext = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = vi.fn(() => ({})) as unknown as typeof getContext;
+    const scrollIntoView = vi.fn();
+    window.HTMLElement.prototype.scrollIntoView = scrollIntoView;
+    try {
+      render(
+        <SeededProvider>
+          <ShowWrappedProbe />
+          <Slide06Archetype metrics={metrics} metadata={metadata} />
+          {/* Mirrors DashboardLayout: the share exporter the CTA scrolls to. */}
+          <div data-testid="share-generator" />
+        </SeededProvider>
+      );
+      expect(vi.mocked(confetti)).toHaveBeenCalledTimes(1);
+      expect(screen.getByText(/Explore deep diagnostic dashboard/)).toBeInTheDocument();
+      expect(screen.getByTestId("show-wrapped")).toHaveTextContent("true");
+
+      fireEvent.click(screen.getByText(/Save share card/));
+      // Secondary CTA exits story mode and jumps to the share exporter.
+      expect(screen.getByTestId("show-wrapped")).toHaveTextContent("false");
+      await waitFor(() => {
+        expect(scrollIntoView).toHaveBeenCalled();
+      });
+    } finally {
+      HTMLCanvasElement.prototype.getContext = getContext;
+      vi.mocked(confetti).mockClear();
+    }
+  });
 });
+
+function ShowWrappedProbe(): React.JSX.Element {
+  const { showWrapped } = useAnalysis();
+  return <span data-testid="show-wrapped">{String(showWrapped)}</span>;
+}

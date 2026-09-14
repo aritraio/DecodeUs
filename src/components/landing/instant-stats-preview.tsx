@@ -15,7 +15,7 @@ function formatLatency(sec: number): string {
  * emits STATS_READY, while Gemini reasons in the background.
  */
 export function InstantStatsPreview({ onAnalyze }: { onAnalyze: () => void }): React.JSX.Element {
-  const { metadata, metrics, stage } = useAnalysis();
+  const { metadata, metrics, stage, warning } = useAnalysis();
   const [analyzing, setAnalyzing] = React.useState(false);
 
   if (!metadata || !metrics) return <div />;
@@ -60,6 +60,11 @@ export function InstantStatsPreview({ onAnalyze }: { onAnalyze: () => void }): R
           {metrics.volume.averagePerDay} msgs/day
         </p>
       </div>
+      {warning && (
+        <p role="status" className="border-t-2 border-black bg-white p-3 text-sm font-bold md:px-6">
+          ⚠ {warning}
+        </p>
+      )}
       {(stage === "stats" || stage === "analyzing") && (
         <div className="border-t-2 border-black p-4 md:p-6">
           <div className="h-2 w-full bg-swiss-muted" role="progressbar" aria-label="AI analysis progress">

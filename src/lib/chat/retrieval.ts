@@ -4,6 +4,7 @@
  * matching clusters, and packages top segments as ContextExcerpts.
  */
 import type { CanonicalMessage, ContextExcerpt } from "@/types/chat";
+import { redactPII } from "@/lib/privacy/anonymizer";
 
 const STOPWORDS = new Set(
   "the,a,an,and,or,but,if,then,else,for,to,of,in,on,at,by,with,from,as,is,are,was,were,be,been,i,you,he,she,it,we,they,me,him,her,us,them,my,your,his,our,their,this,that,these,those,do,does,did,what,when,where,who,why,how,about,most,over,time,our,your,have,has,had,will,would,can,could,should,there,here,than,then,very,just,like,chat,talk".split(
@@ -55,13 +56,16 @@ export interface ScoredSegment {
 /**
  * Retrieve up to `topK` dialogue segments relevant to the query.
  * Windows are ±5 messages around the best-matching line; sender labels
- * are pseudonymized and text is passed through as-is (already redacted
- * excerpts are preferred — callers should use excerpt payloads).
+ * are pseudonymized and every line is sanitized via redactPII before
+ * packaging so raw PII never leaves the browser unredacted.
+ * Pass the real participant display names so they can be pseudonymized.
  */
 export function retrieveRelevantExcerpts(
   messages: CanonicalMessage[],
   query: string,
-  topK = 5
+  topK = 5,
+  personAName = "",
+  personBName = ""
 ): ContextExcerpt[] {
   const keywords = tokenizeQuery(query);
   if (keywords.length === 0 || messages.length === 0) return [];
@@ -103,7 +107,7 @@ export function retrieveRelevantExcerpts(
       dialogue: windowMsgs.map((m) => ({
         sender: (m.senderId === "person_a" ? "Person A" : "Person B") as "Person A" | "Person B",
         timestamp: m.timestamp,
-        text: m.text,
+        text: redactPII(m.text, personAName, personBName).sanitizedText,
       })),
     });
     counter++;

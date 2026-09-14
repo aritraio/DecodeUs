@@ -2,17 +2,23 @@
 
 import * as React from "react";
 import { useAnalysis } from "@/lib/store/analysis-context";
+import type { ContextExcerpt } from "@/types/chat";
 
 /**
  * Mechanical evidence receipts drawer: monospaced dialogue lines with
  * timestamps, sender labels, and Swiss Red trigger highlights.
+ * Accepts optional `customExcerpts` (e.g. live "Ask Your Chat" qexc_*
+ * windows) which are merged with the session excerpts for lookup so
+ * dynamically cited receipts can be inspected.
  */
 export function EvidenceDrawer({
   excerptIds,
   onClose,
+  customExcerpts = [],
 }: {
   excerptIds: string[];
   onClose: () => void;
+  customExcerpts?: ContextExcerpt[];
 }): React.JSX.Element | null {
   const { excerpts } = useAnalysis();
 
@@ -24,7 +30,7 @@ export function EvidenceDrawer({
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  const items = excerpts.filter((e) => excerptIds.includes(e.id));
+  const items = [...excerpts, ...customExcerpts].filter((e) => excerptIds.includes(e.id));
   if (excerptIds.length === 0) return null;
 
   const highlight = (text: string): React.ReactNode => {

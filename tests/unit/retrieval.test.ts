@@ -54,4 +54,29 @@ describe("vectorless retrieval (task 10.1)", () => {
       }
     }
   });
+
+  it("redacts phones and emails before excerpts leave the browser", () => {
+    const pii = [
+      msg("msg_00010", "person_a", "sorry about dinner, call me on 415-555-0132"),
+      msg("msg_00011", "person_b", "sorry too, my email is jordan@example.com really"),
+      msg("msg_00012", "person_a", "sorry again, see you at dinner"),
+    ];
+    const results = retrieveRelevantExcerpts(pii, "sorry dinner");
+    expect(results.length).toBeGreaterThan(0);
+    const allText = results.flatMap((r) => r.dialogue.map((d) => d.text)).join(" ");
+    expect(allText).not.toContain("415-555-0132");
+    expect(allText).not.toContain("jordan@example.com");
+    expect(allText).toMatch(/\[PHONE_REDACTED\]|\[EMAIL_REDACTED\]/);
+  });
+
+  it("pseudonymizes real participant names when provided", () => {
+    const named = [
+      msg("msg_00020", "person_a", "sorry Alex Morgan was late to dinner"),
+      msg("msg_00021", "person_b", "sorry, dinner is on me"),
+    ];
+    const results = retrieveRelevantExcerpts(named, "sorry dinner", 5, "Alex Morgan", "Jordan Lee");
+    const allText = results.flatMap((r) => r.dialogue.map((d) => d.text)).join(" ");
+    expect(allText).not.toContain("Alex Morgan");
+    expect(allText).toMatch(/Person A/);
+  });
 });

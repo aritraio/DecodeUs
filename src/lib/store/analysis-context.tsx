@@ -23,6 +23,8 @@ export interface AnalysisState {
   excerpts: ContextExcerpt[];
   report: IntelligenceReport | null;
   advisory: string | null;
+  /** Non-blocking ingestion warning (e.g. EXTREME_SKEW). Survives setReady. */
+  warning: string | null;
   error: string | null;
   errorCode: string | null;
   showWrapped: boolean;
@@ -36,6 +38,7 @@ export interface AnalysisState {
     metadata: ConversationMetadata;
     metrics: DeterministicMetrics;
     excerpts: ContextExcerpt[];
+    warning?: string | null;
   }) => void;
   setAnalyzing: () => void;
   setReady: (report: IntelligenceReport, advisory?: string | null) => void;
@@ -51,7 +54,7 @@ const AnalysisContext = React.createContext<AnalysisState | null>(null);
 const initial: Pick<
   AnalysisState,
   | "stage" | "progress" | "relationshipType" | "optionalConcern" | "messages"
-  | "metadata" | "metrics" | "excerpts" | "report" | "advisory"
+  | "metadata" | "metrics" | "excerpts" | "report" | "advisory" | "warning"
   | "error" | "errorCode" | "showWrapped" | "activeTab"
 > = {
   stage: "idle",
@@ -64,6 +67,7 @@ const initial: Pick<
   excerpts: [],
   report: null,
   advisory: null,
+  warning: null,
   error: null,
   errorCode: null,
   showWrapped: false,
@@ -79,9 +83,15 @@ export function AnalysisProvider({ children }: { children: React.ReactNode }): R
     setOptionalConcern: (optionalConcern) => setState((s) => ({ ...s, optionalConcern })),
     setProgress: (progress) => setState((s) => ({ ...s, progress })),
     setParsing: () =>
-      setState((s) => ({ ...s, stage: "parsing", progress: 0, error: null, errorCode: null })),
+      setState((s) => ({ ...s, stage: "parsing", progress: 0, error: null, errorCode: null, warning: null })),
     setStats: (data) =>
-      setState((s) => ({ ...s, stage: "stats", progress: 100, ...data })),
+      setState((s) => ({
+        ...s,
+        stage: "stats",
+        progress: 100,
+        ...data,
+        warning: data.warning ?? null,
+      })),
     setAnalyzing: () => setState((s) => ({ ...s, stage: "analyzing" })),
     setReady: (report, advisory = null) =>
       setState((s) => ({ ...s, stage: "ready", report, advisory, showWrapped: true })),
@@ -98,6 +108,8 @@ export function AnalysisProvider({ children }: { children: React.ReactNode }): R
         metrics: null,
         excerpts: [],
         report: null,
+        advisory: null,
+        warning: null,
         stage: "idle",
         progress: 0,
         showWrapped: false,

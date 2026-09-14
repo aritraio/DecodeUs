@@ -63,8 +63,7 @@ describe("landing ingestion (tasks 07.1–07.5)", () => {
     });
   });
 
-  it("dropzone parses a valid .txt fixture to instant stats in <1.5s", async () => {
-    const { InstantStatsPreview } = await import("@/components/landing/instant-stats-preview");
+  it("dropzone parses a valid .txt fixture to instant stats in <1.5s", async () => {    const { InstantStatsPreview } = await import("@/components/landing/instant-stats-preview");
     const { parseFileInline } = await import("@/lib/parser/worker-client");
     const raw = readFileSync(
       join(process.cwd(), "tests/fixtures/synthetic/synthetic-balanced-couple.txt"),
@@ -82,4 +81,34 @@ describe("landing ingestion (tasks 07.1–07.5)", () => {
     expect(result.metrics.volume.totalMessages).toBeGreaterThan(200);
     expect(result.metadata).toBeTruthy();
   }, 15000);
+
+  it("dropzone surfaces the >95% skew warning banner after ingestion", async () => {
+    // Force the inline pipeline: Node's worker_threads Worker hangs on the
+    // TS worker asset in jsdom, while real browsers run the true worker.
+    vi.stubGlobal("Worker", undefined);
+    try {
+      const { InstantStatsPreview } = await import("@/components/landing/instant-stats-preview");
+      renderWithProvider(
+        <>
+          <Dropzone />
+          <InstantStatsPreview onAnalyze={() => {}} />
+        </>
+      );
+      // 97% single-sender split → EXTREME_SKEW warning (not a block).
+      const lines: string[] = [];
+      for (let i = 0; i < 97; i++) {
+        lines.push(`[05/01/2025, 09:${String(i % 60).padStart(2, "0")}:00] Alice: checking in again with another update`);
+      }
+      for (let i = 0; i < 3; i++) {
+        lines.push(`[05/01/2025, 10:0${i}:00] Bob: ok noted here`);
+      }
+      const file = new File([lines.join("\n")], "skewed.txt", { type: "text/plain" });
+      fireEvent.drop(screen.getByTestId("dropzone"), { dataTransfer: { files: [file] } });
+      await waitFor(() => {
+        expect(screen.getByRole("status")).toHaveTextContent(/Highly unbalanced conversation sample/);
+      });
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
 });

@@ -158,44 +158,44 @@ Scenario: Asking who tends to apologize first
 ```
 
 ### Sprint 1 (Days 1–7): Parsing Worker & Deterministic Engine
-- [ ] Initialize Next.js 15+ App Router project with TypeScript and Tailwind CSS.
-- [ ] Implement `src/workers/parse.worker.ts` with iOS and Android regex matchers.
-- [ ] Implement multiline message stitching and canonical schema normalization.
-- [ ] Implement deterministic metric algorithms:
+- [x] Initialize Next.js 15+ App Router project with TypeScript and Tailwind CSS.
+- [x] Implement `src/workers/parse.worker.ts` with iOS and Android regex matchers.
+- [x] Implement multiline message stitching and canonical schema normalization.
+- [x] Implement deterministic metric algorithms:
   - Initiation counter (3h threshold).
   - Median and average response latency calculator.
   - Circadian 24-hour distribution and busiest day calculator.
   - Double-text burst and question counter.
   - Top emoji and catchphrase frequency analyzer.
-- [ ] Write comprehensive unit tests in Vitest using synthetic fixtures.
+- [x] Write comprehensive unit tests in Vitest using synthetic fixtures.
 
 ### Sprint 2 (Days 8–14): AI Pipeline & Gemini Integration
-- [ ] Set up server-side route handler `src/app/api/analyze/route.ts`.
-- [ ] Integrate `@google/genai` with Gemini 2.5 Flash.
-- [ ] Define and test strict JSON Schema (`responseSchema`) for structured output.
-- [ ] Build the Context Windowing & Excerpt Selection Sampler.
-- [ ] Build client-side PII scrubbing regex (phones, emails, addresses, credit cards).
-- [ ] Build mock response generator for local offline development without consuming API quota.
+- [x] Set up server-side route handler `src/app/api/analyze/route.ts`.
+- [x] Integrate `@google/genai` with Gemini 2.5 Flash.
+- [x] Define and test strict JSON Schema (`responseSchema`) for structured output.
+- [x] Build the Context Windowing & Excerpt Selection Sampler.
+- [x] Build client-side PII scrubbing regex (phones, emails, addresses, credit cards).
+- [x] Build mock response generator for local offline development without consuming API quota.
 
 ### Sprint 3 (Days 15–21): Swiss Design System & Wrapped Presentation
-- [ ] Implement Swiss International design system tokens in Tailwind config ([`design.md`](design.md)).
-- [ ] Build base layout components: `SwissHeader`, `GridBackground`, `NoiseOverlay`, `SwissButton`.
-- [ ] Build the 6-slide **Relationship Wrapped** story flow using Framer Motion.
-- [ ] Build the **Deep Diagnostic Dashboard** with tabs:
+- [x] Implement Swiss International design system tokens in Tailwind config ([`design.md`](design.md)).
+- [x] Build base layout components: `SwissHeader`, `GridBackground`, `NoiseOverlay`, `SwissButton`.
+- [x] Build the 6-slide **Relationship Wrapped** story flow using Framer Motion.
+- [x] Build the **Deep Diagnostic Dashboard** with tabs:
   - *Fingerprint*: 7-dimension diagnostic radar / matrix.
   - *Signals*: Green, Red, and Mixed signal badges.
   - *Reality Check*: Assumption vs. empirical reality cards.
   - *Evidence Drawer*: Slide-over receipts modal.
-- [ ] Implement Recharts visualizations for response speeds and circadian heatmaps.
+- [x] Implement Recharts visualizations for response speeds and circadian heatmaps.
 
 ### Sprint 4 (Days 22–28): "Ask Your Chat", Share Cards & Production Audit
-- [ ] Implement `src/app/api/chat/route.ts` with vectorless keyword-matched excerpt retrieval.
-- [ ] Build "Ask Your Chat" terminal component with 5 quick-prompt pills.
-- [ ] Build privacy-safe branded card generator using `html-to-image` for social sharing.
-- [ ] Execute comprehensive Privacy & Security audit (verify zero raw chat logging, verify zero PII leaks).
-- [ ] Perform cross-browser testing (Chrome, Safari, Firefox, iOS Safari, Android Chrome).
-- [ ] Conduct accessibility review (keyboard navigation, high-contrast ratios).
-- [ ] Deploy production build to Vercel.
+- [x] Implement `src/app/api/chat/route.ts` with vectorless keyword-matched excerpt retrieval.
+- [x] Build "Ask Your Chat" terminal component with 5 quick-prompt pills.
+- [x] Build privacy-safe branded card generator using `html-to-image` for social sharing.
+- [x] Execute comprehensive Privacy & Security audit (verify zero raw chat logging, verify zero PII leaks).
+- [x] Perform cross-browser testing (Chrome, Safari, Firefox, iOS Safari, Android Chrome).
+- [x] Conduct accessibility review (keyboard navigation, high-contrast ratios).
+- [x] Deploy production build to Vercel.
 
 ---
 

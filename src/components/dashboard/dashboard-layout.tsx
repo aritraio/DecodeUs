@@ -17,7 +17,7 @@ import { SectionHeader } from "@/components/ui/section-header";
  * section counters, advisory strip, evidence drawer host.
  */
 export function DashboardLayout(): React.JSX.Element {
-  const { report, advisory, activeTab } = useAnalysis();
+  const { report, advisory, warning, activeTab } = useAnalysis();
   const [drawerIds, setDrawerIds] = React.useState<string[]>([]);
 
   if (!report) return <div data-testid="dashboard-layout" />;
@@ -29,6 +29,11 @@ export function DashboardLayout(): React.JSX.Element {
         title="Deep Diagnostic Dashboard"
         meta="5 TABS"
       />
+      {warning && (
+        <p role="status" className="mt-4 border-4 border-swiss-amber bg-white p-3 text-sm font-bold">
+          ⚠ {warning}
+        </p>
+      )}
       {advisory && (
         <p role="status" className="mt-4 border-4 border-swiss-amber bg-white p-3 text-sm font-bold">
           {advisory}

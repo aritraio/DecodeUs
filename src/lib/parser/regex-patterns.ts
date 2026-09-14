@@ -121,7 +121,7 @@ export function normalizeToISO(datePart: string, timePart: string): string | nul
   const split = splitDate(datePart);
   const t = parseTime(timePart);
   if (!split || !t) return null;
-  let [p1, p2, p3] = split;
+  const [p1, p2, p3] = split;
 
   let year: number;
   let month: number;

@@ -111,12 +111,42 @@ export default function Home(): React.JSX.Element {
   return (
     <AnalysisProvider>
       <SwissLayout>
-        <div className="py-10 md:py-16">
-          <HeroSection />
-          <AnalyzeBridge />
-          <StageRouter />
-        </div>
+        <HomeContent />
       </SwissLayout>
     </AnalysisProvider>
+  );
+}
+
+/**
+ * Once analysis is ready, the Wrapped story / dashboard owns the
+ * viewport: the large hero headline + upload dropzone collapse into a
+ * compact "Upload New Chat" header action instead of pushing results
+ * below the fold.
+ */
+function HomeContent(): React.JSX.Element {
+  const { stage, showWrapped, clearChatData } = useAnalysis();
+  const ready = stage === "ready";
+
+  return (
+    <div className="py-10 md:py-16">
+      {ready ? (
+        <div className="flex flex-wrap items-center justify-between gap-3 border-2 border-black bg-white px-4 py-3">
+          <p className="font-mono text-[10px] font-black uppercase tracking-widest text-black">
+            DecodeUs // {showWrapped ? "Wrapped story" : "Diagnostic dashboard"}
+          </p>
+          <button
+            type="button"
+            onClick={clearChatData}
+            className="rounded-none border-2 border-black bg-white px-3 py-2 font-mono text-[11px] font-black uppercase tracking-widest hover:bg-black hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-swiss-accent"
+          >
+            [↑ Upload new chat]
+          </button>
+        </div>
+      ) : (
+        <HeroSection />
+      )}
+      <AnalyzeBridge />
+      <StageRouter />
+    </div>
   );
 }

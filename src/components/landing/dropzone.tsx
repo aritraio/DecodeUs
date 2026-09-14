@@ -4,8 +4,31 @@ import * as React from "react";
 import { useAnalysis } from "@/lib/store/analysis-context";
 import { ErrorBanner, friendlyErrorMessage } from "@/components/landing/error-banner";
 import { parseFileInline } from "@/lib/parser/worker-client";
+import { assessSkew } from "@/lib/parser/error-handler";
 
 const MAX_FILE_BYTES = 50 * 1024 * 1024;
+
+/**
+ * Read an uploaded file as text across runtimes: modern `.text()`,
+ * then `.arrayBuffer()`, then legacy FileReader (jsdom/test envs).
+ */
+async function readFileText(file: File): Promise<string> {
+  const f = file as File & {
+    text?: () => Promise<string>;
+    arrayBuffer?: () => Promise<ArrayBuffer>;
+  };
+  if (typeof f.text === "function") return f.text();
+  if (typeof f.arrayBuffer === "function") {
+    return new TextDecoder().decode(await f.arrayBuffer());
+  }
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result ?? ""));
+    reader.onerror = () =>
+      reject(reader.error ?? new Error("File read failed."));
+    reader.readAsText(file);
+  });
+}
 
 /**
  * WhatsApp .txt drag-and-drop zone.
@@ -34,19 +57,28 @@ export function Dropzone(): React.JSX.Element {
       }
       setParsing();
       try {
-        const text = await file.text();
+        const text = await readFileText(file);
         // Prefer the real Web Worker; fall back to the identical inline
-        // pipeline when Workers are unavailable or fail to construct.
+        // pipeline when Workers are unavailable or fail at runtime
+        // (e.g. CSP-blocked workers, tests / SSR).
         let result;
         try {
           if (typeof Worker === "undefined") throw new Error("no-worker");
           const { parseFileViaWorker } = await import("@/lib/parser/worker-client");
-          result = await parseFileViaWorker(text, { onProgress: setProgress });
+          try {
+            result = await parseFileViaWorker(text, { onProgress: setProgress });
+          } catch {
+            result = await parseFileInline(text);
+            setProgress(100);
+          }
         } catch {
           result = await parseFileInline(text);
           setProgress(100);
         }
-        setStats(result);
+        // Extreme single-sender skew (>95%) continues with a bilateral-
+        // evidence warning banner instead of blocking ingestion.
+        const skew = assessSkew(result.messages);
+        setStats({ ...result, warning: skew.kind === "warning" ? skew.banner : null });
       } catch (err) {
         const e = err as Error & { code?: string };
         setError(

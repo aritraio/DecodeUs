@@ -13,7 +13,7 @@ export function SwissHeader(): React.JSX.Element {
           href="/"
           className="font-mono text-xs font-bold uppercase tracking-widest text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-swiss-accent focus-visible:ring-offset-2"
         >
-          DECODEUS <span className="text-swiss-accent">//</span> CONVERSATION INTELLIGENCE
+          DECODEUS <span className="text-swiss-accent">{"//"}</span> CONVERSATION INTELLIGENCE
         </Link>
         <div
           role="status"

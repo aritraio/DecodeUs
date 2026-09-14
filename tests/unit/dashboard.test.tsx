@@ -122,4 +122,60 @@ describe("diagnostic dashboard (tasks 09.1–09.6)", () => {
     );
     expect(screen.getByTestId("evidence-drawer")).toBeInTheDocument();
   });
+
+  it("evidence drawer resolves live ask-your-chat excerpts via customExcerpts", () => {
+    render(
+      <Seeded>
+        <EvidenceDrawer
+          excerptIds={["qexc_01"]}
+          customExcerpts={[
+            {
+              id: "qexc_01",
+              triggerReason: "sample",
+              startDate: "2025-01-05T09:00:00.000Z",
+              endDate: "2025-01-05T09:05:00.000Z",
+              dialogue: [
+                { sender: "Person A", timestamp: "2025-01-05T09:00:00.000Z", text: "sorry I was late" },
+              ],
+            },
+          ]}
+          onClose={() => {}}
+        />
+      </Seeded>
+    );
+    expect(screen.getByTestId("evidence-drawer")).toBeInTheDocument();
+    expect(screen.getByText(/I was late/)).toBeInTheDocument();
+    expect(screen.queryByText(/No excerpts matched/)).not.toBeInTheDocument();
+  });
+
+  it("surfaces the ingestion skew warning alongside the advisory strip", () => {
+    render(
+      <AnalysisProvider>
+        <SkewSeeder>
+          <DashboardLayout />
+        </SkewSeeder>
+      </AnalysisProvider>
+    );
+    expect(screen.getByText(/Highly unbalanced conversation sample/)).toBeInTheDocument();
+  });
 });
+
+function SkewSeeder({ children }: { children: React.ReactNode }) {
+  const { setStats, setReady } = useAnalysis();
+  const done = React.useRef(false);
+  if (!done.current) {
+    done.current = true;
+    const raw = readFileSync(
+      join(process.cwd(), "tests/fixtures/synthetic/synthetic-balanced-couple.txt"),
+      "utf-8"
+    );
+    const result = runFullPipeline(raw);
+    setStats({
+      ...result,
+      warning:
+        "Highly unbalanced conversation sample. Certain reciprocity metrics will indicate insufficient bilateral evidence.",
+    });
+    setReady(loadMockReport());
+  }
+  return <>{children}</>;
+}

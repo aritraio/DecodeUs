@@ -10,6 +10,7 @@ import * as React from "react";
 import { useAnalysis } from "@/lib/store/analysis-context";
 import { retrieveRelevantExcerpts } from "@/lib/chat/retrieval";
 import { EvidenceDrawer } from "@/components/dashboard/drawers/evidence-drawer";
+import type { ContextExcerpt } from "@/types/chat";
 
 const PRESETS = [
   "Who apologizes first?",
@@ -32,6 +33,7 @@ export function AskYourChatTerminal(): React.JSX.Element {
   const [result, setResult] = React.useState<AnswerState | null>(null);
   const [error, setError] = React.useState<string | null>(null);
   const [drawerIds, setDrawerIds] = React.useState<string[]>([]);
+  const [queryExcerpts, setQueryExcerpts] = React.useState<ContextExcerpt[]>([]);
 
   const submit = React.useCallback(
     async (q: string) => {
@@ -41,8 +43,18 @@ export function AskYourChatTerminal(): React.JSX.Element {
       setError(null);
       setResult(null);
       try {
-        // Prefer pre-redacted session excerpts; fall back to live retrieval
-        const live = retrieveRelevantExcerpts(messages, text, 5);
+        // Live retrieval over canonical messages, redacted client-side
+        // with real participant names so no raw PII reaches /api/chat.
+        const live = retrieveRelevantExcerpts(
+          messages,
+          text,
+          5,
+          metadata?.senderA.displayName ?? "",
+          metadata?.senderB.displayName ?? ""
+        );
+        // Retain the live qexc_* windows so cited receipts can be
+        // inspected in the EvidenceDrawer.
+        setQueryExcerpts(live);
         const relevant = live.length > 0 ? live : [];
         const res = await fetch("/api/chat", {
           method: "POST",
@@ -62,7 +74,6 @@ export function AskYourChatTerminal(): React.JSX.Element {
         if (!res.ok) throw new Error(`Chat failed (${res.status}).`);
         const json = (await res.json()) as AnswerState;
         setResult(json);
-        void metadata;
       } catch (err) {
         setError(err instanceof Error ? err.message : "Query failed.");
       } finally {
@@ -166,7 +177,11 @@ export function AskYourChatTerminal(): React.JSX.Element {
         </div>
       </div>
       {drawerIds.length > 0 && (
-        <EvidenceDrawer excerptIds={drawerIds} onClose={() => setDrawerIds([])} />
+        <EvidenceDrawer
+          excerptIds={drawerIds}
+          customExcerpts={queryExcerpts}
+          onClose={() => setDrawerIds([])}
+        />
       )}
     </div>
   );
