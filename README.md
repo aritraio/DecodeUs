@@ -127,28 +127,50 @@ To analyze a conversation:
 1. Open the conversation in **WhatsApp**.
 2. Tap the contact name / menu options `⋮`.
 3. Select **More** → **Export Chat**.
-4. Choose **Without Media** (MixSignal parses the resulting `.txt` export).
+4. Choose **Without Media** (DecodeUs parses the resulting `.txt` export).
 5. Drag and drop the `.txt` file into DecodeUs.
+
+---
+
+## 📚 Documentation Suite
+
+DecodeUs is supported by an exhaustive, production-ready documentation foundation:
+
+| Document | Purpose |
+| :--- | :--- |
+| 🏗️ [**System Architecture**](architecture.md) | Technical blueprint: Web Worker parsing, deterministic metrics engine, context windowing, and Gemini 2.5 Flash pipeline |
+| 🔄 [**User & Developer Workflows**](workflow.md) | End-to-end user state machine, edge case recovery, Git branching, synthetic chat testing rules, and CI/CD |
+| 🎯 [**MVP Specification & Roadmap**](mvp.md) | V1 vs V1.5 vs V2 scope matrix, Gherkin acceptance criteria, 4-week sprint plan, and Definition of Done |
+| 🛡️ [**Privacy & Ethical AI Governance**](privacy-security.md) | Zero-Knowledge local-first architecture, client-side PII scrubbing, zero DB persistence, and anti-diagnostic guardrails |
+| 🔌 [**API & Data Contracts**](api-spec.md) | Canonical TypeScript models, Gemini JSON `responseSchema`, REST route specs (`/api/analyze`, `/api/chat`), and fixtures |
+| 🎨 [**Swiss Design System**](design.md) | Master UI/UX spec: Swiss International typographic style, 0px border radius, flat tactile depth, and `#FF3000` signal color |
+| 💡 [**Product Vision & Philosophy**](Idea.md) | The original product manifesto: *"Analyze patterns, not people"*, relationship signals, and feature catalog |
+| 🤝 [**Contributing Guidelines**](contributing.md) | Contributor onboarding, local setup, parser extension guide, and pull request checklist |
 
 ---
 
 ## 🗺️ Roadmap
 
 - [x] Product Specification & Philosophy ([`Idea.md`](Idea.md))
-- [ ] **V1 (MVP):**
-  - [ ] Client-side WhatsApp `.txt` parsing engine
+- [x] Swiss International UI/UX Design System ([`design.md`](design.md))
+- [x] Technical Architecture & System Design ([`architecture.md`](architecture.md))
+- [x] Privacy, Security & Governance Blueprint ([`privacy-security.md`](privacy-security.md))
+- [x] API Contracts & Data Specifications ([`api-spec.md`](api-spec.md))
+- [x] MVP Milestone Definition & Sprint Plan ([`mvp.md`](mvp.md))
+- [ ] **V1 (MVP Implementation):**
+  - [ ] Client-side Web Worker WhatsApp `.txt` parsing engine
   - [ ] Deterministic statistics computation (Initiation, response speeds, emojis, active times)
-  - [ ] Relationship Wrapped presentation flow
+  - [ ] Relationship Wrapped presentation flow (6-slide Framer Motion story)
   - [ ] Gemini-powered pattern & signal extraction (Structured JSON)
-  - [ ] Reality Check & Evidence Viewer
-  - [ ] Basic "Ask Your Chat" Q&A
-- [ ] **V1.5:**
-  - [ ] Relationship Timeline & Drift analysis
+  - [ ] Reality Check & Evidence Drawer
+  - [ ] Grounded "Ask Your Chat" Q&A
+- [ ] **V1.5 (Fast Follow):**
+  - [ ] Relationship Timeline & Temporal drift analysis
   - [ ] Pattern Replay visual flowchart
-  - [ ] Shareable image card export (`.png`)
+  - [ ] Privacy-safe shareable social image export (`.png`)
   - [ ] Self-reflection module ("You might be the problem too")
-- [ ] **V2:**
-  - [ ] Multi-platform chat ingestion (Telegram, iMessage where permitted)
+- [ ] **V2 (Expansion):**
+  - [ ] Multi-platform chat ingestion (Telegram, Signal, iMessage where permitted)
   - [ ] Local model support (WebLLM / on-device LLM)
 
 ---
@@ -156,3 +178,4 @@ To analyze a conversation:
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
